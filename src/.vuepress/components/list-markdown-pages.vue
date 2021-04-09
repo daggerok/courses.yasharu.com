@@ -3,7 +3,7 @@
     <div v-bind:class="{ 'row-wrap-space-around-flex-container': isRow }">
       <div v-for="(page, index, array) in markdownPages" :key="index">
         <p>
-          <a :href="page.regularPath">
+          <a :href="$withBase(page.regularPath)">
             {{ page.title }}
           </a>
         </p>
