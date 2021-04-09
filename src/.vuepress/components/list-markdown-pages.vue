@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-bind:class="{ 'row-wrap-space-around-flex-container': isRow }">
-      <div v-for="(page, index, array) in markdownPages" :key="index">
+      <div v-for="(page, index) in markdownPages" :key="index">
         <p>
           <a :href="$withBase(page.regularPath)">
             {{ page.title }}
@@ -33,7 +33,8 @@ export default {
     this.markdownPages = this.$site
                              .pages
                              .filter(nonSame)
-                             .filter(nonSystem);
+                             .filter(nonSystem)
+                             .sort((p1, p2) => p2.regularPath.localeCompare(p1.regularPath));
   }
 };
 </script>
