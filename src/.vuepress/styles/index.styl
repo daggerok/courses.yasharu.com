@@ -4,9 +4,18 @@
  * ref：https://v1.vuepress.vuejs.org/config/#index-styl
  */
 
-.home .hero img
-  max-width 450px !important
+//.home .hero img
+//  max-width 450px !important
+//
+//.home,
+//.theme-default-content
+//  min-width $myWidth !important
 
-.home,
-.theme-default-content
-  min-width $myWidth !important
+.home .hero img
+  max-width 450px //max-width $myWidth
+
+.page-nav,
+.description,
+.theme-default-content,
+.theme-default-content.content__default
+  min-width $myWidth
