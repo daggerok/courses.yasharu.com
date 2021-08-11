@@ -7,7 +7,11 @@
     "name": "Maksim Kostromin",
     "email": "daggerok@gmail.com"
   },
-  "repository": "https://github.com/daggeropk/courses.yasharu.com",
+  "repository": {
+    "url": "https://github.com/daggerok/courses.yasharu.com",
+    "directory": "src",
+    "docsBranch": "master"
+  },
   "scripts": {
     "dev": "vuepress dev src",
     "build": "vuepress build --no-cache src",
@@ -17,12 +21,13 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@types/node": "14.14.37",
+    "@types/node": "16.4.13",
     "@vuepress/plugin-active-header-links": "1.8.2",
     "@vuepress/plugin-back-to-top": "1.8.2",
     "@vuepress/plugin-medium-zoom": "1.8.2",
     "cross-env": "7.0.3",
     "vuepress": "1.8.2",
-    "vuepress-theme-default-prefers-color-scheme": "2.0.0"
+    "vuepress-theme-default-prefers-color-scheme": "2.0.0",
+    "vuepress-types": "0.9.4"
   }
 }

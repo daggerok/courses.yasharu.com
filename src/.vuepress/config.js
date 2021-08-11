@@ -1,4 +1,4 @@
-const { name, description } = require('../../package');
+const { name: title, description, repository } = require(`${process.cwd()}/package.json`)
 const base = process.env.BASE || '/';
 
 module.exports = {
@@ -8,12 +8,12 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: name,
+  title,
 
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
-  description: description,
+  description,
 
   /**
    * Extra tags to be injected to the page HTML `<head>`
@@ -36,11 +36,14 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: '',
-    editLinks: false,
-    docsDir: '',
-    editLinkText: '',
-    lastUpdated: false,
+    repo: repository.url,
+    docsDir: repository.directory,
+    docsBranch: repository.docsBranch,
+    searchPlaceholder: 'Search...',
+    activeHeaderLinks: false,
+    displayAllHeaders: true,
+    lastUpdated: true,
+    editLinks: true,
     nav: [
       {
         text: 'Home',
